@@ -1,0 +1,18 @@
+<h2>Date Picker Component</h2>
+
+<mat-form-field color="accent" appearance="fill">
+  <mat-label>Choose a Date</mat-label>
+  <input matInput [matDatepicker]="picker1" />
+  <mat-datepicker-toggle
+    matSuffix
+    [for]="picker1"
+    disabled="{{ isDatePickerDisabled }}"
+  ></mat-datepicker-toggle>
+  <mat-datepicker #picker1></mat-datepicker>
+</mat-form-field>
+
+<button mat-raised-button color="primary" (click)="toggleDatePicker()">
+  {{ datePickerenabler }} Date Picker
+</button>
+
+<button mat-raised-button (click)="openPaginator()">Open Paginator Component</button>
